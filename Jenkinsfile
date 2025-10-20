@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         APP_NAME = 'springboot-docker-demo'
-        DOCKER_IMAGE = "myrepo/${APP_NAME}:${BUILD_NUMBER}"
+        DOCKER_IMAGE = "${APP_NAME}:${BUILD_NUMBER}"
     }
 
     stages {
