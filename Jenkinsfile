@@ -47,7 +47,7 @@ pipeline {
                 script {
                     // Stop and remove any running container with same name
                     sh "docker rm -f ${APP_NAME} || true"
-                    // Run a new one
+                    // Run a new one container
                     sh "docker run -d -p 8080:8080 --name ${APP_NAME} ${DOCKER_IMAGE}"
                 }
             }
